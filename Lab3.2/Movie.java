@@ -6,11 +6,11 @@ public class Movie {
   Movie(String name, int dur, double rait) {
     title = name;
     duration = dur;
-    raiting = rait;
+    rating = rait;
   }
   
   public String toString(){
-    return "Название: " + title + ", Продолжительность: " + duration + ", Рейтинг: " + raiting;
+    return "Название: " + title + ", Продолжительность: " + duration + ", Рейтинг: " + rating;
   }
   
   public boolean equals(Object another) {
