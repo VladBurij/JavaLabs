@@ -1,7 +1,7 @@
 public class Triangle {
-  public double A;
-  public double B;
-  public double C;
+  public double A = 0;
+  public double B = 0;
+  public double C = 0;
 
   Triangle() {
     A = 1;
