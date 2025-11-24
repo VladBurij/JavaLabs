@@ -9,4 +9,14 @@ public class Cylinder extends SolidOfRevolution {
     public double getHeight() {
         return height;
     }
+
+    @Override
+    public double getVolume(){
+        return height * Math.PI * Math.pow(this.getRadius(), 2);
+    }
+
+    @Override
+    public String toString(){
+        return "Цилиндр с радиусом " + this.getRadius() + ", высотой " + height + ", объёмом " + getVolume();
+    }
 }
