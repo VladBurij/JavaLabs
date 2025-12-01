@@ -21,5 +21,14 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e);
         }
+
+        MyStack stack1 = new MyStack();
+        stack1.push(3);
+        stack1.push(6);
+        MyStack stack2 = stack1.clone();
+        stack2.push(20);
+        stack1.pop();
+        System.out.println(stack1.toString());
+        System.out.println(stack2.toString());
     }
 }
