@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-public class MyStack {
-    private ArrayList<Comparable> list = new ArrayList<>();
+public class MyStack implements Cloneable {
+    private ArrayList<Object> list = new ArrayList<>();
 
     public boolean isEmpty() {
         return list.isEmpty();
@@ -20,8 +20,19 @@ public class MyStack {
         return o;
     }
 
-    public void push(Comparable o) {
+    public void push(Object o) {
         list.add(o);
+    }
+
+    @Override
+    public MyStack clone() {
+        try {
+            MyStack clonestack = (MyStack) super.clone();
+            clonestack.list = new ArrayList<>(this.list);
+            return clonestack;
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException("Клонирование стека не удалось.");
+        }
     }
 
     @Override /** Переопределяет метод toString класса Object */
