@@ -1,0 +1,7 @@
+import java.util.Comparator;
+public class FractionSortMaxMin implements Comparator<Fraction>{ {
+    @Override
+    public int compare(Fraction f1, Fraction f2) {
+        return f1.getNum()/f1.getDen() - f2.getNum()/f2.getDen();
+    }
+}
